@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div class="image-left">
+        <div class="logo-box">
+            <img class="logo" src="./images/logo.png" alt="Logo">
+            <div class="logo-text">SPACE SCHOOL</div>
+        </div>
+        <p>Photo by <a href="https://unsplash.com/@adamthehooligan">Adam Miller</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
+        <img class="background-image" src="./images/astronaut.jpeg" alt="An astronaut in space">
+    </div>
+    <div class="content-right">
+        <div class="description">
+            <p>This is not a real space school!
+                <br>There is a need for a space school like this to exist
+                 to help future astronauts realise their dreams.
+                <br>Sign up <em>now</em> to get started.</p>
+            <br>
+            You <em>know</em> you want to.
+        </div>
+        <div class="form-wrapper">
+            <header>Sign Up Now</header>
+            <form id="sign-up">
+                <div class="form-row">
+                    <div class="label-block">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="label-block">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="label-block">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="label-block">
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="telephone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="label-block">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" placeholder="min: 8 characters">
+                        <p style="color:red" id="password_error"></p>
+                    </div>
+                    <div class="label-block">
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_password">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="button-wrapper">
+            <button type="submit" form="sign-up" value="Submit">Create Account</button>
+        </div>
+        <div class="log-in">
+            Already have an account? <span>Log in</span>
+        </div>
+    </div>
+</body>
+<script>
+    const password = document.getElementById("password");
+    const passwordConfirm = document.getElementById("confirm_password");
+    const passwordError = document.getElementById("password_error")
+
+    passwordConfirm.onchange = function () {
+        if (this.value != password.value) {
+            passwordError.innerHTML = "* Passwords do not match";
+            password.style.borderColor = "red";
+            this.style.borderColor = "red";
+        } else if (this.value == password.value) {
+            passwordError.innerHTML = "";
+            password.style.borderColor = "lightgray";
+            this.style.borderColor = "lightgray";
+        }
+    }
+
+    password.onchange = function () {
+        if (this.value != passwordConfirm.value) {
+            passwordError.innerHTML = "* Passwords do not match";
+            passwordConfirm.style.borderColor = "red";
+            this.style.borderColor = "red";
+        } else if (this.value == passwordConfirm.value) {
+            passwordErr.innerHTML = "";
+            passwordConfirm.style.borderColor = "lightgray";
+            this.style.borderColor = "lightgray";
+        }
+    }
+
+</script>
+</html>
