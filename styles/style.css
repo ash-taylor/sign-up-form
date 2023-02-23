@@ -85,20 +85,10 @@ img.logo {
     justify-content:center;
 }
 
-/* .description,
-.form-wrapper,
-.button-wrapper,
-.log-in {
-    border: 1px solid black;
-    flex: none;
-} */
-
 .description {
-    padding: 20px;
-    font-size: 2em;
+    font-size: 1.3em;
     padding-left: 40px;
-    margin-right: 400px;
-    margin-bottom: 20px;   
+    margin-right: 400px;   
 }
 
 .form-wrapper {
