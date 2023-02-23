@@ -6,8 +6,8 @@
 
 @font-face {
     font-family: 'space_mono';
-    src: url('./fonts/spacemono-regular-webfont.woff2') format('woff2'),
-         url('./fonts/spacemono-regular-webfont.woff') format('woff');
+    src: url('../fonts/spacemono-regular-webfont.woff2') format('woff2'),
+         url('../fonts/spacemono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
